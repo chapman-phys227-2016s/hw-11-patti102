@@ -1,6 +1,6 @@
 # PHYS227 HW 11
 
-**Author:** _\<your name\>_
+**Author:** Taylor Patti
 
 [![Build Status](https://travis-ci.org/chapman-phys227-2016s/hw-11-patti102.svg?branch=master)](https://travis-ci.org/chapman-phys227-2016s/hw-11-patti102)
 
