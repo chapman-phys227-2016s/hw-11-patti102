@@ -183,12 +183,16 @@ def picture():
         k_val = k / 100.0
         x_points = []
         y_points = []
+        xsaver = 0
+        ysaver = 0
         for n in xrange(1000):
             tgain = 2*math.pi*(n + k_val)
-            approx_values = myhat.rk4(myhat.equation_1, myhat.equation_2, myhat.x_0, myhat.y_0, myhat.n, tgain)
+            approx_values = myhat.rk4(myhat.equation_1, myhat.equation_2, xsaver, ysaver, myhat.n, tgain)
             x_points.append(approx_values[0][-1])
             y_points.append(approx_values[1][-1])
-        pizza = plt.plot(approx_values[0], approx_values[1])
+            xsaver = x_points[-1]
+            ysaver = y_points[-1]
+        plt.plot(x_points, y_points, '.')
         plt.ylabel("x_prime")
         plt.xlabel("x")
         plt.ylim([-1.1, 1.1])
